@@ -1,7 +1,8 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel  # added QLabel
-from PyQt5.QtGui import QIcon, QFont  # added QFont
-from PyQt5.QtCore import Qt  # added for text alignment
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+# qpimap loads and manages the image file before it is place in a label.
+from PyQt5.QtGui import QIcon, QFont, QPixmap
+from PyQt5.QtCore import Qt
 
 """
 sys: This is a built-in Python module that provides access to variables and functions that interact with the Python interpreter.
@@ -38,6 +39,20 @@ class MainWindow(QMainWindow):
         )
 
         self.label.setAlignment(Qt.AlignCenter)
+        self.picklabel = QLabel(self)
+        self.picklabel.setGeometry(0, 100, 300, 250)
+        self.pixmap = QPixmap("images/Greg.png")
+        # put the image (pixmap) into the label
+        self.picklabel.setPixmap(self.pixmap)
+        # if image is too big or too small, we can make it fit our commit
+        self.picklabel.setScaledContents(True)
+        # Lets try putting Greg in the bottom right corner - we'll use MATH!
+        self.picklabel.setGeometry(self.width(
+        ) - self.picklabel.width(), self.height() - self.picklabel.height(), 300, 250)
+
+        # Lets try putting Greg in the middle - we'll use MATH!
+        self.picklabel.setGeometry((self.width(
+        ) - self.picklabel.width()) // 2, (self.height() - self.picklabel.height()) // 2, 300, 250)
 
 
 def main():
