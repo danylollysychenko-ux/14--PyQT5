@@ -12,9 +12,9 @@ from PyQt5.QtCore import Qt
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("CMP 25-26 Year 1")
+        self.setWindowTitle("Memes")
         self.setGeometry(00, 00, 800, 600)  # (x, y, width, height)
-        self.setWindowIcon(QIcon("images/Skyler.png"))
+        self.setWindowIcon(QIcon("images/python.png"))
         # added - label:
         self.label = QLabel("MeOW", self)
         # added- placing label:
@@ -44,7 +44,7 @@ class MainWindow(QMainWindow):
 
         # ---------------------------------------------------------------------
 
-        self.setWindowIcon(QIcon("images/cat.png"))
+        #self.setWindowIcon(QIcon("images/cat.png"))
         # added - label:
         self.label = QLabel("Skyler white yo", self)
         # added- placing label:
@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
 
         # ---------------------------------------------------------------------
 
-        self.setWindowIcon(QIcon("images/boi.png"))
+        #self.setWindowIcon(QIcon("images/boi.png"))
         # added - label:
         self.label = QLabel("Hehe Boi", self)
         # added- placing label:
