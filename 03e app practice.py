@@ -9,8 +9,11 @@ In column 2 (wider than col 1 and col 3, a single picture taking up the full hei
 In column 3 (wider than col 1, but narrower than col 2): 2 pictures of UNIQUE heights to take up the full height of the window.
 """
 
+from PyQt5.QtGui import QIcon, QFont, QPixmap
 from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QMainWindow, QApplication
+from PyQt5.QtCore import Qt
 import sys
+import os
 
 
 class MainWindow(QMainWindow):
@@ -49,19 +52,86 @@ class MainWindow(QMainWindow):
         label6.setStyleSheet("background-color: pink")
         label7.setStyleSheet("background-color: brown")
 
+        label1 = QLabel()
+        image_path = r"C:\Python\14--PyQT5\images\Skyler.png"
+        pixmap = QPixmap(image_path)
+        label1.setPixmap(pixmap)
+        pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
+        label1.setScaledContents(True)
+        label1.setFixedSize(250, 400)
+        
+        pixmap = QPixmap(pixmap)
+
+        if pixmap.isNull():
+            print("Still not loading!")
+        else:
+            print("Image loaded!")
+
+        label2 = QLabel()
+        image_path = r"C:\Python\14--PyQT5\images\cat.png"
+        pixmap = QPixmap(image_path)
+        label2.setPixmap(pixmap)
+        pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
+        label2.setScaledContents(True)
+        label2.setFixedSize(250, 580)
+        
+        pixmap = QPixmap(pixmap)
+
+        if pixmap.isNull():
+            print("Still not loading!")
+        else:
+            print("Image loaded!")
+
+        label3 = QLabel()
+        image_path = r"C:\Python\14--PyQT5\images\boi.png"
+        pixmap = QPixmap(image_path)
+        label3.setPixmap(pixmap)
+        pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
+        label3.setScaledContents(True)
+        
+        pixmap = QPixmap(pixmap)
+
+        if pixmap.isNull():
+            print("Still not loading!")
+        else:
+            print("Image loaded!")
+
+        label4 = QLabel()
+        image_path = r"C:\Python\14--PyQT5\images\dog.png"
+        pixmap = QPixmap(image_path)
+        label4.setPixmap(pixmap)
+        pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
+        label4.setScaledContents(True)
+        
+        pixmap = QPixmap(pixmap)
+
+        if pixmap.isNull():
+            print("Still not loading!")
+        else:
+            print("Image loaded!")
+
+        label5 = QLabel()
+        image_path = r"C:\Python\14--PyQT5\images\whatisthis.png"
+        pixmap = QPixmap(image_path)
+        label5.setPixmap(pixmap)
+        label5.setFixedSize(300, 300)
+        pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
+        label5.setScaledContents(True)
+        
+        pixmap = QPixmap(pixmap)
+
+        if pixmap.isNull():
+            print("Still not loading!")
+        else:
+            print("Image loaded!")
+
         layout = QGridLayout()
-        # layout.setColumnStretch(1, 2)
-        # layout.setColumnStretch(0, 1)
-        # layout.setColumnStretch(2, 1)
-        # label1.setFixedWidth(600)
-        # label2.setFixedHeight(950)
-        # label3.setFixedHeight(1900)
-        # label4.setFixedWidth(650)
+
         layout.addWidget(label1, 0, 0, 2, 1)
         layout.addWidget(label2, 2, 0, 4, 1)
         layout.addWidget(label3, 0, 1, 6, 1)
-        layout.addWidget(label4, 0, 2, 4, 1)
-        layout.addWidget(label5, 4, 2, 2, 1)
+        layout.addWidget(label4, 0, 3, 5, 1)
+        layout.addWidget(label5, 5, 3, 1, 1)
 
         self.centralWidget.setLayout(layout)
 
@@ -74,7 +144,6 @@ def main():
 
     # Starts the application loop. The program will keep running until you close the window
     sys.exit(app.exec_())
-
 
 if __name__ == "__main__":
     main()
