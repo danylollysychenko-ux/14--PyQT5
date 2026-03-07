@@ -35,22 +35,6 @@ class MainWindow(QMainWindow):
         # The central widget will act as a container for all other widgets.
 
         # create a bunch of labels:
-        label1 = QLabel("Label 1")
-        label2 = QLabel("Label 2")
-        label3 = QLabel("Label 3")
-        label4 = QLabel("Label 4")
-        label5 = QLabel("Label 5")
-        label6 = QLabel("Label 6")
-        label7 = QLabel("Label 7")
-
-        # Give our labels some color:
-        label1.setStyleSheet("background-color: red")
-        label2.setStyleSheet("background-color: blue")
-        label3.setStyleSheet("background-color: yellow")
-        label4.setStyleSheet("background-color: green")
-        label5.setStyleSheet("background-color: purple")
-        label6.setStyleSheet("background-color: pink")
-        label7.setStyleSheet("background-color: brown")
 
         label1 = QLabel()
         image_path = r"C:\Python\14--PyQT5\images\Skyler.png"
