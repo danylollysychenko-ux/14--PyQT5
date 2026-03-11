@@ -13,7 +13,6 @@ from PyQt5.QtGui import QIcon, QFont, QPixmap
 from PyQt5.QtWidgets import QLabel, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout, QMainWindow, QApplication
 from PyQt5.QtCore import Qt
 import sys
-import os
 
 
 class MainWindow(QMainWindow):
@@ -37,7 +36,7 @@ class MainWindow(QMainWindow):
         # create a bunch of labels:
 
         label1 = QLabel()
-        image_path = r"C:\Python\14--PyQT5\images\Skyler.png"
+        image_path = r"C:\Users\CMP_DaLysychenko\Desktop\Python\14  PyQT5\images\python.png"
         pixmap = QPixmap(image_path)
         label1.setPixmap(pixmap)
         pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
@@ -52,7 +51,7 @@ class MainWindow(QMainWindow):
             print("Image loaded!")
 
         label2 = QLabel()
-        image_path = r"C:\Python\14--PyQT5\images\cat.png"
+        image_path = r"C:\Users\CMP_DaLysychenko\Desktop\Python\14  PyQT5\images\boi.png"
         pixmap = QPixmap(image_path)
         label2.setPixmap(pixmap)
         pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
@@ -67,7 +66,7 @@ class MainWindow(QMainWindow):
             print("Image loaded!")
 
         label3 = QLabel()
-        image_path = r"C:\Python\14--PyQT5\images\boi.png"
+        image_path = r"C:\Users\CMP_DaLysychenko\Desktop\Python\14  PyQT5\images\cat.png"
         pixmap = QPixmap(image_path)
         label3.setPixmap(pixmap)
         pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
@@ -81,7 +80,7 @@ class MainWindow(QMainWindow):
             print("Image loaded!")
 
         label4 = QLabel()
-        image_path = r"C:\Python\14--PyQT5\images\dog.png"
+        image_path = r"C:\Users\CMP_DaLysychenko\Desktop\Python\14  PyQT5\images\dog.png"
         pixmap = QPixmap(image_path)
         label4.setPixmap(pixmap)
         pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio)
@@ -95,7 +94,7 @@ class MainWindow(QMainWindow):
             print("Image loaded!")
 
         label5 = QLabel()
-        image_path = r"C:\Python\14--PyQT5\images\whatisthis.png"
+        image_path = r"C:\Users\CMP_DaLysychenko\Desktop\Python\14  PyQT5\images\whatisthis.png"
         pixmap = QPixmap(image_path)
         label5.setPixmap(pixmap)
         label5.setFixedSize(300, 300)
