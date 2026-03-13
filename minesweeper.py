@@ -119,8 +119,8 @@ class MainWindow(Q.QMainWindow):
         self.setGeometry(500, 550, 600, 400)
         self.setMinimumHeight(550)
         self.click_count = 0
-        self.rows = 10
-        self.cols = 10
+        self.rows = 20
+        self.cols = 20
         self.total_mines = 20
         self.initUI()
 
@@ -189,12 +189,14 @@ class MainWindow(Q.QMainWindow):
             self.restart_game()
         else:
             print("Not playing again.")
-            exit()
+            self.close()
 
     def restart_game(self):
-        for row in self.mine_list:
-            for cell in row:
-                cell.reset()
+        while self.grid.count():
+            item = self.grid.takeAt(0)
+            del item
+        self.create_buttons(self.rows, self.cols, self.grid)
+        self.click_count = 0
 
     def reveal_all(self, end_game=True):
         for row in self.mine_list:
@@ -245,8 +247,7 @@ class MainWindow(Q.QMainWindow):
 
     def initUI(self):
         self.create_layout()
-        self.create_buttons(10, 10, self.grid)
-        # await our first click
+        self.restart_game()
 
 
 def main():
